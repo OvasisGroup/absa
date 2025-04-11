@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>InsureMaster - Dashboard</title>
+    <title>InsureMaster - Report Parameters</title>
     <link rel="icon" href="images/favicon.svg" type="image/png" />
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- boxicons -->
@@ -15,7 +17,12 @@
     <!-- material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -428,276 +435,193 @@
 
             </ul>
         </aside>
+
+
+
+        <!-- MAIN BODY -->
         <div class="main">
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
- 
-                        <button class="toggle-btn" type="button" id="togglebutton">
-                            <i id="icon" class='bx bxs-chevrons-right'></i>
-                        </button>
 
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="welcome">Welcome <span>A. N. Other</span></div>
-                  </div>
-                </div>
-              </nav>
+                    <button class="toggle-btn" type="button" id="togglebutton">
+                        <i id="icon" class='bx bxs-chevrons-right'></i>
+                    </button>
 
-              <div class="main_body">
-                <div class="cardy">
-                    <div class="cards_body">
-                        <div class="content">
-                            <p>Sum Assured (YTD)</p>
-                            <hr/>
-                            <h3>11.3M</h3>
-                        </div>
-                        <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
-                    </div>
-                    <div class="cards_body">
-                        <div class="content">
-                            <p>Policies Sold (YTD)</p>
-                            <hr/>
-                            <h3>11.3M</h3>
-                        </div>
-                        <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
-                    </div>
-                    <div class="cards_body">
-                        <div class="content">
-                            <p>Total Premium (YTD)</p>
-                            <hr/>
-                            <h3>11.3M</h3>
-                        </div>
-                        <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="welcome">Welcome <span>A. N. Other</span></div>
                     </div>
                 </div>
-              </div>
+            </nav>
 
+            <div class="main_body">         
+                    <div class="report_parameters">
+                        <div class="report_parameters_header">
+                            <h4>Report Parameters</h4>
+                            <button id="openModalBtn">New Report <span><i
+                                        class='bx bxs-plus-circle'></i></span></button>
 
-              <div class="graphs_body">
-                <div class="graphs_area">
-                    <p >Premium Production</p>
-                    <canvas id="lineChart"></canvas>
-                </div>
-                <div class="graphs_areas">
-                    <div class="portfolio">
-                        <p class="myport" >My Portfolio</p>
-                    </div>
-                    <div>
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Policy No.</th>
-                                <th scope="col">Endors No.</th>
-                                <th scope="col">Product</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>700/0700/01/ABSA00196/Dec/2024</td>
-                                <td>ABSA00303/1	</td>
-                                <td>EDUCATION</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>LE/LAST EXPENSE/01/ABSA00193/Dec/2024	</td>
-                                <td>ABSA00300/1	</td>
-                                <td>MOTOR PRIVATE</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>LIV/LIVESTOCK/01/ABSA00205/Dec/2024	</td>
-                                <td>ABSA00314/1	</td>
-                                <td>LIVESTOCK</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>700/0700/01/ABSA00196/Dec/2024</td>
-                                <td>ABSA00303/1	</td>
-                                <td>EDUCATION</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>LE/LAST EXPENSE/01/ABSA00193/Dec/2024	</td>
-                                <td>ABSA00300/1	</td>
-                                <td>MOTOR PRIVATE</td>
-                              </tr>
-                         
-                              
-                            </tbody>
-                            
-                          </table>
-                          <div class="table_footer">
-                            <p class="entries">Showing 1 to 5 of 55 entries</p>
-                            <button>View All <span><i class='bx bxs-right-arrow'></i></span></button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2>Modal Title</h2>
+                                    <p>This is a simple modal popup.</p>
+                                </div>
+                            </div>
                         </div>
-                          
-                    </div>
-                    
-                </div>
-              </div>
 
-              <!-- maker checker pending -->
-               <div class="maker_checker">
-                <div class="maker">
-                    <div class="maker_header">
-                        <h4>Checker Tasks</h4>
-                    </div>
-                    <div class="checker_table">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Task ID</th>
-                                <th scope="col">Task Name</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                            </tbody>
-                            
-                          </table>
-                          <div class="table_footer">
-                            <p class="entries">Showing 1 to 5 of 55 entries</p>
-                            <button>View All <span><i class='bx bxs-right-arrow'></i></span></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="maker">
-                    <div class="maker_header">
-                        <h4>Maker Tasks</h4>
-                    </div>
-                    <div class="checker_table">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Task ID</th>
-                                <th scope="col">Task Name</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>46843</td>
-                                <td>Policy P/01/BC/BUSINESS COMBINED/ABSA00342/2025 pending authorization</td>
-                              </tr>
-                            </tbody>
-                            
-                          </table>
-                          <div class="table_footer">
-                            <p class="entries">Showing 1 to 5 of 55 entries</p>
-                            <button>View All <span><i class='bx bxs-right-arrow'></i></span></button>
+                        <div class="tablebody">
+                            <table id="example" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter ID</th>
+                                        <th>Parameter Name</th>
+                                        <th>Parameter Label</th>
+                                        <th>Format Type</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                                
+                            </table>
                         </div>
                     </div>
-                </div>
-                <div class="maker">
-                    <div class="maker_header">
-                        <h4>Pending Transactions</h4>
-                    </div>
-                    <div class="checker_table">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Task ID</th>
-                                <th scope="col">Task Name</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>46843</td>
-                                <td>P/01/700/0700/ABSA00345/2025</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>46843</td>
-                                <td>P/01/700/0700/ABSA00345/2025</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>46843</td>
-                                <td>P/01/700/0700/ABSA00345/2025	</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>46843</td>
-                                <td>P/01/700/0700/ABSA00345/2025	</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>46843</td>
-                                <td>P/01/700/0700/ABSA00345/2025	</td>
-                              </tr>
-                            </tbody>
-                            
-                          </table>
-                          <div class="table_footer">
-                            <p class="entries">Showing 1 to 5 of 55 entries</p>
-                            <button>View All <span><i class='bx bxs-right-arrow'></i></span></button>
-                        </div>
-                    </div>
-                </div>
-
-               </div>
-               
-
-                
-            
+            </div>
         </div>
     </div>
 
+
+
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/main.js"></script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
