@@ -479,3 +479,26 @@ tr th{
 td{
     padding-top: .25rem;
 }
+.entries{
+    color: var(--secondary);
+}
+
+.myport{
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.maker_checker{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.maker{
+    background-color: white;
+    border-radius: .75rem;
+    padding: 2rem;
+}
