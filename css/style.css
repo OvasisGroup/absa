@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary: #DC0032;
+    --secondary: #FF780F;
+    --accent: #D9D9D9;
+    --bg-light: #ecf0f1;
+    --text-dark: #2d3436;
+    --text-light: #BFB9B9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+body {
+    background-color: var(--accent);
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.absa_logo{
+    margin-bottom: 1rem;
+}
+
+.welcome_text{
+    line-height: .5rem;
+}
+
+.login_body{
+    height: 100vh;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.login_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.login_input_fields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.login_input_fields input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--secondary);
+    border-radius: 3px;
+    background-color: white;
+    outline: none;
+}
+
+.login_input_fields button{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+.forgot_password{
+    font-weight: 700;
+}
+
+.forgot_password:hover{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.login_image{
+    background-color: var(--primary);
+    background-image: url('../images/home_bg.svg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.insuremaster{
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.insuremaster h2{
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+#sidebar{
+    width: 90px;
+    min-width: 90px;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand{
+    width: 300px;
+    min-width: 300px;
+}
+
+#sidebar:not(.expand) .banca,
+/* #sidebar:not(.expand) #togglebutton, */
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.toggle-btn{
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: var(--bg-light);
+}
+
+#sidebar.expand .sidebar-logo,
+#sidebar.expand a.sidebar-link span{
+    animation: fadeIn .25s ease-in-out;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logodivone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.logotext{
+    font-weight: 700;
+}
+
+.logotextdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.logodivone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logodivone img{
+    width: 50px;
+    height: 50px;
+}
+
+.logodivone p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sidebar-logo a{
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.logoarea{
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-nav{
+    padding: 0.7rem 0;
+    flex: 11 auto;
+    z-index: 10;
+}
+
+a.sidebar-link{
+    padding: .625rem 1.625rem;
+    color: var(--primary);
+    display: block;
+    white-space: nowrap;
+    font-weight: 400;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i,
+.dropdown-item i{
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    color: var(--secondary);
+}
+
+a.sidebar-link:hover{
+    background-color: var(--text-light);
+    color: var(--bg-light);
+    border-left: 3px solid var(--bg-light);
+}
+
+.sidebar-item{
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown{
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 100%;
+    background-color: var(--secondary);
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown{
+    display: block;
+    width: 100%;
+    opacity: 1;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown .sidebar-dropdown{
+    left: 130px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after{
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: '';
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(135deg);
+    transition: transform .25s ease-in-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after{
+    transform: rotate(-45deg);
+}
+
+.sidebar-dropdown .sidebar-link{
+    position: relative;
+    padding-left: 3rem;
+    transition: all .25s ease-in-out;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.sidebar-dropdown a.sidebar-link::before{
+    content: "";
+    height: 0.125rem;
+    width: 0.325rem;
+    background-color: var(--bg-light);
+    position: absolute;
+    left: 1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .25s ease-in-out;
+}
+
+.sidebar-dropdown a.sidebar-link:hover{
+    background: transparent;
+    border-left: 3px solid transparent;
+    padding-left: 3.8rem;
+    color: red;
+}
+
+.nav-icon{
+    color: var(--secondary);
+}
