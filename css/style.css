@@ -140,6 +140,8 @@ a:hover {
     min-height: 100vh;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    padding: 1rem;
+    width: 100%;
 }
 
 #sidebar{
@@ -341,4 +343,53 @@ a.sidebar-link:hover{
 
 .nav-icon{
     color: var(--secondary);
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navthings{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.welcome{
+    font-weight: 700;
+    padding-left: 1rem;
+}
+
+.welcome span{
+    color: var(--primary);
+}
+
+.cardy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cards_body{
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.content h3{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary);
 }
