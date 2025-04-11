@@ -405,6 +405,14 @@ a.sidebar-link:hover{
     background-color: white;
     border-radius: .5rem;
     padding: 2rem;
+    width: 100%;
+}
+
+.graphs_areas{
+    background-color: white;
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 100%;
 }
 
 .summary{
@@ -417,4 +425,27 @@ a.sidebar-link:hover{
     font-weight: 600;
     color: var(--primary);
     font-size: 1.5rem;
+}
+
+.graphs_areas p{
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.portfolio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio button{
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-weight: 700;
+    cursor: pointer;
 }

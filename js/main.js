@@ -17,7 +17,7 @@ const ctx = document.getElementById('lineChart').getContext('2d');
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       datasets: [
         {
-          label: 'Dataset 1',
+          label: 'Premium Production',
           data: [38, 58, 75, 50, 40, 68, 80, 66, 34, 47, 97, 80],
           borderColor: '#DC0032',
           backgroundColor: '#DC0032',
@@ -27,7 +27,7 @@ const ctx = document.getElementById('lineChart').getContext('2d');
           pointBackgroundColor: '#DC0032'
         },
         {
-          label: 'Dataset 2',
+          label: 'Premium Production',
           data: [58, 96, 70, 44, 60, 55, 60, 95, 49, 46, 60, 55],
           borderColor: '#FF780F',
           backgroundColor: '#FF780F',
