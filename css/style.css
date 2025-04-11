@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 :root {
     --primary: #DC0032;
@@ -13,12 +15,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Outfit", sans-serif;
 }
 
 body {
     background-color: var(--accent);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Outfit", sans-serif;
 }
 
 a {
@@ -427,11 +429,7 @@ a.sidebar-link:hover{
     font-size: 1.5rem;
 }
 
-.graphs_areas p{
-    font-weight: 600;
-    color: var(--primary);
-    font-size: 1.5rem;
-}
+.graphs_areas{}
 
 .portfolio{
     display: flex;
@@ -440,7 +438,27 @@ a.sidebar-link:hover{
     width: 100%;
 }
 
-.portfolio button{
+.table_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.table_footer button{
+    color: var(--secondary);
+    border: none;
+    border-radius: .25rem;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.entries{
+    font-weight: 400;
+}
+
+.portfoli button{
     background-color: var(--secondary);
     color: white;
     border: none;
@@ -448,4 +466,16 @@ a.sidebar-link:hover{
     border-radius: .25rem;
     font-weight: 700;
     cursor: pointer;
+}
+
+tbody tr{
+    font-size: small;
+}
+
+tr th{
+    color: #DC0032;
+}
+
+td{
+    padding-top: .25rem;
 }
