@@ -28,9 +28,7 @@
                         <p class="banca">BancAssurance</p>
                     </div>
                 </div>
-                <button class="toggle-btn" type="button" id="togglebutton">
-                    <i id="icon" class='bx bxs-chevrons-right'></i>
-                </button>
+
             </div>
 
             <ul class="sidebar-nav">
@@ -431,8 +429,23 @@
             </ul>
         </aside>
         <div class="main">
+            <button class="toggle-btn" type="button" id="togglebutton">
+                <i id="icon" class='bx bxs-chevrons-right'></i>
+            </button>
             <nav class="navbar navbar-expand px-4 py-3">
-                <form action="#" class=""
+                <form action="#" class="">
+                    <input type="text" placeholder="Search" name="search">
+                    <button type="submit" class="search_button"><i class='bx bxs-search v'></i></button>
+                </form>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mas-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="drobdown" class="nav-icon pe-md-0">
+                                <img src="/accounts.png" class="avatar img-fluid" atl="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>
