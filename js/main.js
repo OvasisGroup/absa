@@ -75,25 +75,23 @@ const ctx = document.getElementById('lineChart').getContext('2d');
   });
 
 
-//   MODAL
+// DATATABLE FOR REPORTS
+new DataTable('#example');
+
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModalBtn");
 const span = document.querySelector(".close");
 
-btn.onclick = function() {
+btn.onclick = () => {
   modal.style.display = "block";
 }
 
-span.onclick = function() {
+span.onclick = () => {
   modal.style.display = "none";
 }
 
-window.onclick = function(event) {
+window.onclick = (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-
-
-// DATATABLE FOR REPORTS
-new DataTable('#example');
