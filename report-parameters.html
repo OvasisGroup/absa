@@ -8,8 +8,9 @@
     <link rel="icon" href="images/favicon.svg" type="image/png" />
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- boxicons -->
@@ -21,7 +22,6 @@
     <script defer
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
-    <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -456,157 +456,208 @@
                     </div>
                 </div>
             </nav>
-            
-            <div class="main_body">         
-                    <div class="report_parameters">
-                        <div class="report_parameters_header">
-                            <h4>Report Parameters</h4>
-                            <button >New Report <span>
-                                <i  class='bx bxs-plus-circle'></i></span></button>              
-                        </div>
 
-                        <div class="tablebody">
-                            <table id="example" class="table table-striped" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Parameter ID</th>
-                                        <th>Parameter Name</th>
-                                        <th>Parameter Label</th>
-                                        <th>Format Type</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>44674</td>
-                                        <td>Report Format</td>
-                                        <td>format</td>
-                                        <td>Options</td>
-                                        <td>
-                                            <i class='bx bxs-bullseye' id="view"></i>
-                                            <i class='bx bxs-edit' id="edit"></i>
-                                            <i class='bx bx-trash' id="delete"></i>
-                                        </td>
-                                    </tr>
-
-
-                                </tbody>
-                                
-                            </table>
-                        </div>
+            <div class="main_body">
+                <div class="report_parameters">
+                    <div class="report_parameters_header">
+                        <h4>Report Parameters</h4>
+                        <!-- <button>New Report <span>
+                                <i class='bx bxs-plus-circle'></i></span></button> -->
                     </div>
+
+                    <div class="create-parameter">
+                        <h3>Create Parameter</h3>
+                        <form class="createparameter">
+                            <div class="form-group-parameter">
+                                <div class="paraName">
+                                    <label for="parameter-name">Parameter Name</label>
+                                    <input type="text" id="parameter-name" name="parameter-name"
+                                        placeholder="Enter Parameter Name">
+                                </div>
+
+                                <div class="paraName">
+                                    <label for="parameter-label">Parameter Label</label>
+                                    <input type="text" id="parameter-label" name="parameter-label"
+                                        placeholder="Enter Parameter Label">
+                                </div>
+
+                                <div class="paraName">
+                                    <label for="parameter-format">Format Type</label>
+                                    <select>
+                                        <option selected disabled>Select Parameter Type</option>
+                                        <option value="date">Date</option>
+                                        <option value="number">Number</option>
+                                        <option value="boolean">Text</option>
+                                        <option value="number">LOV</option>
+                                        <option value="number">Options</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="paraBot">
+                            <div class="paraName">
+                                <label for="parameter-label">Options(separated by commas)</label>
+                                <input type="text" id="parameter-label" name="parameter-label"
+                                    placeholder="pdf,csv,xlsx">
+                            </div>
+                            <div class="lov">
+                            <label for="parameter-type">Lov Name</label>
+                            <select id="parameter-type" name="parameter-type">
+                                <option selected disabled>Select Lov Name</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="button-area">
+                            <button class="save">Save</button>
+                            <button class="cancel">Cancel</button>
+                        </div>
+                        
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="tablebody">
+                    <table id="example" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Parameter ID</th>
+                                <th>Parameter Name</th>
+                                <th>Parameter Label</th>
+                                <th>Format Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>44674</td>
+                                <td>Report Format</td>
+                                <td>format</td>
+                                <td>Options</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
 

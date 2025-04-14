@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
     --primary: #DC0032;
@@ -15,12 +15,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Outfit", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 body {
     background-color: var(--accent);
-    font-family: "Outfit", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 a {
@@ -162,9 +162,6 @@ a:hover {
     scrollbar-color: #888 #f1f1f1; /* thumb color, track color */
 }
 
-#sidebar::-webkit-scrollbar-track {
-    background: #DC0032;
-  }
 
 #sidebar.expand {
     width: 300px;
@@ -180,7 +177,6 @@ a:hover {
 }
 
 #sidebar:not(.expand) .banca,
-/* #sidebar:not(.expand) #togglebutton, */
 #sidebar:not(.expand) a.sidebar-link span {
     display: none;
 }
@@ -646,3 +642,128 @@ td {
     background-color: white;
     border-radius: .5rem;
 }
+
+/* CREATE PARAMETERS */
+.create-parameter{
+    padding: 2rem;
+    border: #FF780F solid 1px;
+    border-radius: .5rem;
+    background-color: var(--bg-light);
+    margin-bottom: 1rem;
+}
+
+.create-parameter h3{
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+.form-group-parameter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.paraName{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paraName input{
+    outline: none;
+    border: var(--secondary) solid 1px;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-weight: 300;
+}
+
+.paraName select{
+    outline: none;
+    border: var(--secondary) solid 1px;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+}
+
+.lov{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.paraBot{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.lov select{
+    outline: none;
+    border: var(--secondary) solid 1px;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+}
+
+.button-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-area .cancel{
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button-area .cancel:hover{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.button-area .save{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.button-area .save:hover{
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+label{
+    margin-bottom: .5rem;
+}
+
+
+
+
+ 

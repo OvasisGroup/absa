@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>InsureMaster - Dashboard</title>
+    <title>InsureMaster - Report Parameters</title>
     <link rel="icon" href="images/favicon.svg" type="image/png" />
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/2.2.2/css/dataTables.bootstrap5.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- boxicons -->
@@ -15,7 +17,12 @@
     <!-- material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script defer src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -24,7 +31,7 @@
             <div class="logoarea">
                 <div class="sidebar-logo">
                     <div class="logodivone">
-                        <a href="/dashboard.html"><img src="images/absa-logo.svg" alt="Absa Logo" class="absa_log" width="50px"></a>
+                        <img src="images/absa-logo.svg" alt="Absa Logo" class="absa_log" width="50px">
                         <p class="banca">BancAssurance</p>
                     </div>
                 </div>
@@ -33,7 +40,7 @@
 
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="/dashboard.html" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i id="nav-icon" class='bx bxs-dashboard'></i>
                         <span>Dashboard</span>
                     </a>
@@ -46,7 +53,7 @@
                     </a>
                     <ul id="auth1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="/organization_setups.html" class="sidebar-link">
+                            <a href="#" class="sidebar-link">
                                 Organization Setups
                             </a>
                         </li>
@@ -428,64 +435,185 @@
 
             </ul>
         </aside>
+
+
+
+        <!-- MAIN BODY -->
         <div class="main">
-            <div class="nav">
-                <nav class="navbar navbar-expand-lg ">
-                    <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
 
-                        <button class="toggle-btn" type="button" id="togglebutton">
-                            <i id="icon" class='bx bxs-chevrons-right'></i>
-                        </button>
+                    <button class="toggle-btn" type="button" id="togglebutton">
+                        <i id="icon" class='bx bxs-chevrons-right'></i>
+                    </button>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <div class="welcome">Welcome <span>A. N. Other</span></div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="welcome">Welcome <span>A. N. Other</span></div>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="main_body">         
+                    <div class="report_parameters">
+                        <div class="report_parameters_header">
+                            <h4>Report Parameters</h4>
+                            <button >New Report <span>
+                                <i  class='bx bxs-plus-circle'></i></span></button>              
+                        </div>
+
+                        <div class="tablebody">
+                            <table id="example" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter ID</th>
+                                        <th>Parameter Name</th>
+                                        <th>Parameter Label</th>
+                                        <th>Format Type</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>44674</td>
+                                        <td>Report Format</td>
+                                        <td>format</td>
+                                        <td>Options</td>
+                                        <td>
+                                            <i class='bx bxs-bullseye' id="view"></i>
+                                            <i class='bx bxs-edit' id="edit"></i>
+                                            <i class='bx bx-trash' id="delete"></i>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                                
+                            </table>
                         </div>
                     </div>
-                </nav>
             </div>
-
-            <div class="cardy">
-                <div class="cards_body">
-                    <div class="content">
-                        <p>Sum Assured (YTD)</p>
-                        <hr />
-                        <h3>11.3M</h3>
-                    </div>
-                    <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
-                </div>
-                <div class="cards_body">
-                    <div class="content">
-                        <p>Policies Sold (YTD)</p>
-                        <hr />
-                        <h3>11.3M</h3>
-                    </div>
-                    <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
-                </div>
-                <div class="cards_body">
-                    <div class="content">
-                        <p>Total Premium (YTD)</p>
-                        <hr />
-                        <h3>11.3M</h3>
-                    </div>
-                    <img src="images/premium_icon.svg" alt="Absa Logo" class="absa_logo" width="80px">
-                </div>
-            </div>
-            
-            <div class="orgsetups">
-                
-            </div>
-
         </div>
     </div>
 
+
+
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/main.js"></script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
