@@ -551,6 +551,77 @@ td {
     align-items: center;
     margin-bottom: 1rem;
     margin-top: 2rem;
+    width: 100%;
+}
+
+.createReportButtons{
+    display: flex;
+    align-items: end;
+    gap: .25rem;
+}
+
+.paraNames{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    background-color: var(--bg-light);
+    border: var(--secondary) solid 1px;
+    border-radius: .25rem;
+    padding: 2rem;
+}
+
+.paraNamestwo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    width: 100%;
+    border-bottom: var(--secondary) solid 1px;
+    padding: 1rem 0rem;
+}
+
+.paraNamestwo select{
+    outline: none;
+    border: var(--secondary) solid 1px;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+}
+
+.createReportButtons .save{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createReportButtons a{
+    text-decoration: none;
+    color: white;
+}
+
+.addParameter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    color: var(--primary);
+}
+
+.addParameter button{
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .report_parameters_header h4 {
@@ -761,6 +832,34 @@ td {
 
 label{
     margin-bottom: .5rem;
+}
+
+.paginate_button page-item active{
+    background-color: var(--secondary) !important;
+}
+
+.active>.page-link, .page-link.active{
+    background-color: #DC0032;
+    border: #DC0032 solid 1px;
+}
+a.page-link {
+    color: var(--primary);
+}
+
+a.page-link:hover {
+    color: var(--secondary);
+}
+
+.dataTables_info{
+    color: var(--primary);
+}
+
+.paraName textarea{
+    outline: none;
+    border: var(--secondary) solid 1px;
+    padding: .25rem;
+    border-radius: .25rem;
+    font-weight: 300;
 }
 
 
