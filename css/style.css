@@ -147,8 +147,8 @@ a:hover {
 }
 
 #sidebar {
-    width: 90px;
-    min-width: 90px;
+    width: 300px;
+    min-width: 300px;
     transition: all 0.3s ease-in-out;
     background-color: var(--primary);
     display: flex;
@@ -176,10 +176,10 @@ a:hover {
     padding-top: 1rem;
 }
 
-#sidebar:not(.expand) .banca,
+/* #sidebar:not(.expand) .banca,
 #sidebar:not(.expand) a.sidebar-link span {
     display: none;
-}
+} */
 
 .toggle-btn {
     width: 30px;
@@ -297,7 +297,7 @@ a.sidebar-link:hover {
     position: relative;
 }
 
-#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+/* #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
     position: absolute;
     top: 0;
     left: 90px;
@@ -334,7 +334,7 @@ a.sidebar-link:hover {
 
 #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(-45deg);
-}
+} */
 
 .sidebar-dropdown .sidebar-link {
     position: relative;
@@ -552,6 +552,18 @@ td {
     margin-bottom: 1rem;
     margin-top: 2rem;
     width: 100%;
+    z-index: 20;
+}
+
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+.modal {
+    z-index: 1055 !important;
+}
+
+.modal-dialog {
+    max-width: 90%;
 }
 
 .createReportButtons{
@@ -672,6 +684,17 @@ td {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.modal-title{
+    color: var(--primary);
+}
+
+.modal-footer button{
+    background-color: #DC0032;
+    color: white;
+    border: none;
+    width: 100%;
 }
 
 .close:hover {
@@ -860,6 +883,45 @@ a.page-link:hover {
     padding: .25rem;
     border-radius: .25rem;
     font-weight: 300;
+}
+
+.searchFilter{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.searchButton{
+    background-color: var(--primary);
+    border-radius: .25rem;
+    color: var(--white);    
+    border: none;
+    padding: 0.3rem;
+    font-size: 1rem;    
+    cursor: pointer;
+    color: white;
+}
+
+.searchButton:hover{
+    background-color: var(--secondary);
+    border-radius: .25rem;
+    color: var(--white);    
+    border: none;
+    padding: 0.3rem;
+    font-size: 1rem;    
+    cursor: pointer;
+    color: white;
+}
+
+.searchFilters{
+    border: var(--secondary);
+    padding: 2rem;
+    border-radius: .25rem;
+    /* border: var(--secondary) solid 1px; */
+    margin-bottom: 1rem;
+    background-color: var(--bg-light);
 }
 
 

@@ -73,3 +73,13 @@ const ctx = document.getElementById('lineChart').getContext('2d');
       }
     }
   });
+
+
+  $(document).ready(function () {
+    $('#myTabletwo').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true,
+        info: true
+    });
+});
