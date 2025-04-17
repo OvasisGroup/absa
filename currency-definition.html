@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsureMaster - Report Parameters</title>
+    <link rel="icon" href="images/favicon.svg" type="image/png" />
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- DataTables Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="logoarea">
+                <div class="sidebar-logo">
+                    <div class="logodivone">
+                        <img src="images/absa-logo.svg" alt="Absa Logo" class="absa_log" width="50px">
+                        <p class="banca">BancAssurance</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i id="nav-icon" class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth1" aria-expanded="false" aria-controls="auth1">
+                        <i class='bx bxs-cog'></i>
+                        <span>Setup</span>
+                    </a>
+                    <ul id="auth1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Organization Setups
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Underwriting Setups
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Finance Setups
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth2" aria-expanded="false" aria-controls="auth2">
+                        <i class='bx bxs-user'></i>
+                        <span>User Administration</span>
+                    </a>
+                    <ul id="auth2" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Users and Roles
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth2" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Roles and Permissions
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth2" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Permissions
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth3" aria-expanded="false" aria-controls="auth3">
+                        <i class='bx bxs-receipt'></i>
+                        <span>Quotes</span>
+                    </a>
+                    <ul id="auth3" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth3" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth3" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth3" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth4" aria-expanded="false" aria-controls="auth4">
+                        <i class='bx bxs-food-menu'></i>
+                        <span>Transactions</span>
+                    </a>
+                    <ul id="auth4" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth4" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth4" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth4" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth5" aria-expanded="false" aria-controls="auth5">
+                        <i class='bx bxs-coin-stack'></i>
+                        <span>Bulk Uploads</span>
+                    </a>
+                    <ul id="auth5" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth5" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth5" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth5" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth6" aria-expanded="false" aria-controls="auth6">
+                        <i class='bx bxs-certification'></i>
+                        <span>Certificates</span>
+                    </a>
+                    <ul id="auth6" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth6" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth6" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth6" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth7" aria-expanded="false" aria-controls="auth7">
+                        <i class='bx bxs-collection'></i>
+                        <span>Claim Transactions</span>
+                    </a>
+                    <ul id="auth7" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth7" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth7" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth7" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth8" aria-expanded="false" aria-controls="auth8">
+                        <i class='bx bxs-credit-card'></i>
+                        <span>Finance Transactions</span>
+                    </a>
+                    <ul id="auth8" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth8" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth8" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth8" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth9" aria-expanded="false" aria-controls="auth9">
+                        <i class='bx bxs-wallet'></i>
+                        <span>Payments</span>
+                    </a>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth9" aria-expanded="false" aria-controls="auth9">
+                        <i class='bx bxs-detail'></i>
+                        <span>Reports</span>
+                    </a>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth9" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth10" aria-expanded="false" aria-controls="auth10">
+                        <i class='bx bxs-file'></i>
+                        <span>Custom Reports Developer</span>
+                    </a>
+                    <ul id="auth10" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Prospects
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth10" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                New Quote
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth10" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Quote Inquiry
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="auth10" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                Convert Quotes
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </aside>
+
+
+
+        <!-- MAIN BODY -->
+        <div class="main">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+
+                    <button class="toggle-btn" type="button" id="togglebutton">
+                        <i id="icon" class='bx bxs-chevrons-right'></i>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="welcome">Welcome <span>A. N. Other</span></div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="main_body">
+                <div class="report_parameters">
+                    <div class="report_parameters_header">
+                        <h4>Currency Details </h4>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#currencyDetails">New <span>
+                                <i class='bx bxs-plus-circle'></i></span></button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="currencyDetails" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <p class="modal-heading" id="exampleModalLabel">Edit Currency</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="paraName">
+                                        <label for="parameter-label">Fraction</label>
+                                        <input type="text" id="parameter-label" name="parameter-label"
+                                            placeholder="Enter Check ID">
+                                    </div>
+                                    <div class="paraName">
+                                        <label for="parameter-label">Fraction Units</label>
+                                        <input type="text" id="parameter-label" name="parameter-label"
+                                            placeholder="Enter Check Name">
+                                    </div>
+
+                                    <div class="paraNameCheck">
+                                        <label for="parameter-label">Active</label>
+                                        <input type="checkbox" name="subscribe" value="yes">
+                                    </div>
+
+                                    <div class="paraName">
+                                        <label for="parameter-label">Round Off</label>
+                                        <input type="text" id="parameter-label" name="parameter-label"
+                                            placeholder="Enter Check Name">
+                                    </div>
+
+                                    <div class="paraName">
+                                        <label for="parameter-label">Symbol</label>
+                                        <input type="text" id="parameter-label" name="parameter-label"
+                                            placeholder="Enter Check Name">
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer modali">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tablebody">
+                    <p class="regiondetails">Currency List</p>
+                    <table id="myTable" class="table table-striped" class="table table-striped display"
+                        style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Currency Name</th>
+                                <th>Active</th>
+                                <th>Fraction</th>
+                                <th>Fraction Units</th>
+                                <th>Round Off</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>KES</td>
+                                <td>Kenya Shilling</td>
+                                <td>True</td>
+                                <td>Cents</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TSH</td>
+                                <td>Tanzania Shilling</td>
+                                <td>True</td>
+                                <td>Cents</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="tablebody">
+                    <p class="regiondetails">Exchange Rates</p>
+                    <table id="branchDetails" class="table table-striped" class="table table-striped display"
+                        style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Currency Name</th>
+                                <th>Active</th>
+                                <th>Fraction</th>
+                                <th>Fraction Units</th>
+                                <th>Round Off</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <i class='bx bxs-bullseye' id="view"></i>
+                                    <i class='bx bxs-edit' id="edit"></i>
+                                    <i class='bx bx-trash' id="delete"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script defer src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#branchDetails').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>
