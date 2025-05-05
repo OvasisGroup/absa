@@ -1,10 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary: #DC0032;
-    --secondary: #FF780F;
+    --primary: #9F1C2C;
+    --secondary: #DC0032;
     --accent: #D9D9D9;
     --bg-light: #ecf0f1;
     --text-dark: #2d3436;
@@ -388,8 +386,10 @@ a.sidebar-link:hover {
     align-items: center;
 }
 
-.nav{
+.navbar{
     position: sticky !important;
+    top: 0;
+    z-index: 999;
 }
 
 .sidebar-nav {
@@ -409,7 +409,7 @@ a.sidebar-link {
 }
 
 .nav-icon {
-    color: var(--secondary);
+    color: white;
 }
 
 .user {
@@ -443,7 +443,7 @@ a.sidebar-link {
 }
 
 .cards_body {
-    background-color: #ecf0f1;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: .5rem;
     display: flex;
@@ -458,7 +458,7 @@ a.sidebar-link {
 .content h3 {
     font-weight: 700;
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .bell{
