@@ -61,7 +61,7 @@ a:hover {
 #sidebar::-webkit-scrollbar {
     background: var(--secondary);  /* Track color */
     border-radius: 0px;
-    width: 5px;
+    width: 15px;
   }
 
 #sidebar::-webkit-scrollbar-thumb {
